@@ -1,9 +1,22 @@
 # SE-521 — Problem Sets
 
+**A note on evidence.** An architectural claim needs grounds. "This decomposition is better" is an
+opinion; "here are the six change scenarios, here is how many modules each touches under both
+decompositions, and here is the one where the new design is worse" is an answer. Every part that
+says *argue* means with named alternatives and a stated cost.
+
+**A note on the constructions.** Each set builds on the lessons' §3 constructions. Where a part
+names lesson stages, do those first.
+
+**A note on what you give up.** Every part asking for a design also asks what the design costs. A
+submission that lists only benefits cannot score in the upper band — that rule is the whole
+discipline of this course in one sentence.
+
 ---
 
 ## Problem Set 1 — A Decomposition, Argued and Measured
 **Covers L01–L04 · Budget: 12–16 hours**
+*Builds on: L01 §3 (all stages), L02 §3 stages 1–7, L03 §3 stages 1–6, L04 §3 stages 1–5*
 
 Take a real system, ideally one you did not write alone.
 
@@ -32,10 +45,17 @@ to six conditionals in the system. Report how many you left alone.
 The hidden coupling you found. Whether the information-hiding decomposition is worth its
 indirection cost *for this system*, with the numbers.
 
+### Marking emphasis
+
+The change scenarios. A decomposition defended in the abstract scores poorly; one defended by
+counting the modules each concrete change touches, including the change where your design is
+worse, scores well.
+
 ---
 
 ## Problem Set 2 — A Domain Model with Explicit Boundaries
 **Covers L05–L07 · Budget: 16–20 hours**
+*Builds on: L05 §3 (all stages), L06 §3 stages 1–7, L07 §3 (all stages)*
 
 This is the core of the Term 2 build artifact.
 
@@ -67,10 +87,16 @@ row of the consistency table whose mechanism was "nothing", and what you did. Th
 cost: files, mapping code, reader trace, compared with the same feature written directly in
 a framework view.
 
+### Marking emphasis
+
+Boundary reasoning. The marks are in where you put the boundaries and why — specifically in the
+invariant that forced each aggregate's size, and in the one you had to ask the business about.
+
 ---
 
 ## Problem Set 3 — Fitness Functions, Legacy Strategy, and an ADR Log
 **Covers L08–L10 · Budget: 12–16 hours**
+*Builds on: L08 §3 (all stages), L09 §3 stages 1–6, L10 §3 (all stages)*
 
 **Part A — Fitness functions (L08 §3).** Three named architectural characteristics, ranked,
 with what you are trading away. A layering contract with a baseline and a ratchet. Cycle
@@ -101,6 +127,11 @@ knows the system.
 The reversibility audit's most expensive decision and what would have made it cheaper. Your
 service-boundary recommendation and the strongest case against it. What the ADR backfill
 revealed that nobody could explain.
+
+### Marking emphasis
+
+Survivability. A fitness function that a team would disable within a month has failed regardless
+of what it checks. Justify each one against the five design rules.
 
 ---
 

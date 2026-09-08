@@ -3,10 +3,25 @@
 Three sets plus the Term 1 build artifact. Marked against the five-criterion rubric in
 `00-program/assessment-and-rubrics.md`.
 
+**A note on evidence.** A claim about a test suite's value is worth nothing without the measurement
+that establishes it. "Our tests are good" is an opinion; "mutation score 71%, here are the twelve
+surviving mutants and what each one proves about a gap in the suite" is an answer. Every part below
+that says *measure* or *establish* means with a recorded number and the method that produced it.
+
+**A note on the constructions.** Each set builds on the incremental constructions in the lessons'
+§3. Where a part names lesson stages, do those first — the problem set assumes the code they
+produce.
+
+**A note on negative results.** Several parts ask what an instrument *cannot* establish, or what
+your false-positive rate is. Those answers carry full marks. A submission reporting only green
+checks has not looked hard enough.
+
 ---
 
 ## Problem Set 1 — A Test Suite Rebuilt From First Principles
 **Covers L01–L05 · Budget: 12–16 hours**
+*Builds on: L01 §3 stages 1–5, L02 §3 (all stages), L03 §3 stages 1–6, L04 §3 stages 1–7, L05 §3
+stages 1–5*
 
 Take a module of real code with an existing test suite — yours, or an open-source project
 you know. 300–800 lines of production code is the right size.
@@ -45,10 +60,16 @@ coverage, mutation score, and the number of tests that break under a scripted re
 - If you had to keep only 20% of your new suite, which would it be, and what does that tell
   you about the other 80%?
 
+### Marking emphasis
+
+Justification. A suite that is smaller and faster than the one it replaced but whose note cannot
+say *which defects it still catches* scores below a larger suite whose note can.
+
 ---
 
 ## Problem Set 2 — A Fully Typed Library and a Custom Check
 **Covers L06–L08 · Budget: 12–16 hours**
+*Builds on: L06 §3 (all stages), L07 §3 stages 1–6, L08 §3 (all stages)*
 
 ### Part A — Type it
 
@@ -90,10 +111,16 @@ typing specification and say which is right.
 - Whether the effort was worth it, with your evidence. A negative answer, well argued, is
   a full-credit answer.
 
+### Marking emphasis
+
+Precision of language. The distinction between what the type checker proves, what it merely
+suggests, and what it cannot see is the whole content of this set.
+
 ---
 
 ## Problem Set 3 — A Reproducible, Published, Continuously Integrated Package
 **Covers L09–L10 · Budget: 10–14 hours**
+*Builds on: L09 §3 stages 1–7, L10 §3 (all stages)*
 
 This set is the Term 1 build artifact, assessed.
 
@@ -124,6 +151,11 @@ This set is the Term 1 build artifact, assessed.
 - One architectural property your pipeline currently selects for or against.
 - The dependency you removed or would remove, and the trade.
 - What in your reproducibility story you know to be a lie, and how much it matters.
+
+### Marking emphasis
+
+Evidence. Every claim about reproducibility must be backed by a run from a clean environment, and
+the honest list of what your lockfile does not guarantee is worth more than the lockfile.
 
 ---
 

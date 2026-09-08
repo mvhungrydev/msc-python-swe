@@ -51,9 +51,24 @@ msc-python-swe/
 │   ├── CA-731  Cloud & Platform Architecture at Scale
 │   ├── ML-741  Machine Learning Systems Engineering
 │   └── FM-751  Formal Methods & Verification for Practitioners
-├── capstone/                         ← CAP-799 capstone handbook & project catalog
-└── appendices/                       ← glossary, notation, paper index, errata log
+├── capstone/                         ← CAP-799 capstone handbook & project catalogue
+└── appendices/                       ← glossary, notation, paper index, tracker, log, errata
 ```
+
+**Scale:** 181 files, ~424,000 words. 13 courses × (syllabus + 9–10 lessons + problem sets +
+exam), plus the program materials, the capstone, and six appendices. Roughly 1,840 nominal
+study hours.
+
+The appendices are working files, not reference matter you read once:
+
+| File | Use |
+|---|---|
+| `progress-tracker.md` | Copy it, fill it in, use it to notice when you start skipping exercises |
+| `learning-log-template.md` | The single highest-return study habit in the programme |
+| `glossary.md` | Terms defined once, with the lesson that develops them |
+| `mathematical-notation.md` | Look up an unfamiliar symbol, use it, move on |
+| `paper-index.md` | Every primary source, by topic, with the twelve-paper core marked |
+| `errata.md` | What you find wrong. Finding an error and proving it is a passing grade |
 
 Each course directory contains:
 
@@ -71,7 +86,16 @@ Each course directory contains:
 2. Take `00-program/placement-self-assessment.md`. It is honest, it is uncomfortable, and
    it tells you which lessons in Term 1 you may skim rather than study.
 3. Set up your working environment with `00-program/lab-setup.md`.
-4. Begin `term-1/PY-501-python-object-model/syllabus.md`.
+4. Copy `appendices/progress-tracker.md` somewhere you will see it, and start
+   `appendices/learning-log-template.md`. Ten minutes now; it is what keeps this from stalling.
+5. Begin `term-1/PY-501-python-object-model/syllabus.md`.
+
+If you would rather start where the material is most immediately applicable to your day job than
+at the beginning: **CA-731** (cloud and platform architecture) and **DS-701** (distributed systems)
+stand alone reasonably well, and CA-731 L05 (infrastructure as code) and L07 (SLOs and error
+budgets) are usable this week. The prerequisite arrows in the handbook are real, but they are about
+depth of reasoning rather than vocabulary — you will follow those two courses, and get more out of
+them after Terms 1–4.
 
 ## A note on how the lessons teach
 

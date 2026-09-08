@@ -2,10 +2,23 @@
 
 Marked against the five-criterion rubric in `00-program/assessment-and-rubrics.md`.
 
+**A note on evidence.** Every claim about an abstraction's cost must be measured, not asserted.
+"Descriptors are slower" is a sentence; "here is the benchmark, here is the noise floor, here is the
+2.3× difference and here is what it becomes once the specialising interpreter warms up" is an
+answer.
+
+**A note on the constructions.** Each set builds on the lessons' §3 constructions. Where a part
+names lesson stages, do those first.
+
+**A note on subtraction.** Several parts ask you to remove an abstraction, or to justify one against
+the simpler mechanism below it on the ladder. Those are the assessed parts. A submission that only
+adds machinery has demonstrated half the skill.
+
 ---
 
 ## Problem Set 1 — A Declarative Framework, Built Four Ways
 **Covers L01–L04 · Budget: 14–18 hours**
+*Builds on: L01 §3 stages 1–6, L02 §3 (all stages), L03 §3 stages 1–7, L04 §3 (all stages)*
 
 Build the *same* small declarative framework four times, using a different mechanism each
 time, then compare.
@@ -49,10 +62,16 @@ application (different answers are allowed and should be defended)? What did the
 comparison teach you that building one would not have? And: what does your framework do that
 `attrs` does not — answer honestly.
 
+### Marking emphasis
+
+Subtraction. Four implementations are required; the marks are in the comparison and in identifying
+which one you would actually ship, with the cost of the others named.
+
 ---
 
 ## Problem Set 2 — A Streaming Pipeline with Correct Resource Semantics
 **Covers L05–L07 · Budget: 12–16 hours**
+*Builds on: L05 §3 (all stages), L06 §3 stages 1–7, L07 §3 (all stages)*
 
 Build a pipeline library and use it on a real workload of ≥1 GB.
 
@@ -85,10 +104,17 @@ The error policy's threshold and its justification. What your cleanup story stil
 guarantee, and why the correct answer to that gap is idempotence rather than more cleanup
 code.
 
+### Marking emphasis
+
+Correctness under failure. A pipeline that works on the happy path is the starting point, not the
+deliverable. The resource semantics under early exit, exception, and abandonment are the assessed
+part.
+
 ---
 
 ## Problem Set 3 — An Internal DSL and Its Critique
 **Covers L08–L10 · Budget: 12–16 hours**
+*Builds on: L08 §3 stages 1–6, L09 §3 (all stages), L10 §3 stages 1–5*
 
 **Part A — The ten-uses test.** Before building anything: write ten realistic uses of your
 proposed DSL and the same ten in plain Python (L09 §2.7). Include this in the deliverable
@@ -119,6 +145,11 @@ one real codebase. Inline one abstraction and report the measurements.
 **Design note (1,400–1,800 words).** Ship or don't ship, argued. What a new team member must
 learn. What the tooling loses. The two abstractions you decided *not* to remove and why.
 And the one thing you built during this course that you now think should not exist.
+
+### Marking emphasis
+
+Judgement. The critique of your own DSL carries more marks than the DSL. Applying the ten-uses
+test honestly to your own work, and reporting a negative result, scores in the upper band.
 
 ---
 
